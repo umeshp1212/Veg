@@ -2,8 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Product;
 use App\User;
+use Illuminate\Database\Eloquent\Model;
+
 
 class Category extends Model
 {
@@ -11,5 +13,8 @@ class Category extends Model
 
     public function user(){
         return $this->belognsTo(User::class);
+    }
+    public function products(){
+        return $this->hasMany(Product::class);
     }
 }
