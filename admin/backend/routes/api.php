@@ -18,5 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource('/categories', 'CategoryController');
-Route::apiResource('/products', 'ProductController');
+
+Route::group(['middleware' => 'cors'], function() {
+    Route::apiResource('/categories', 'CategoryController');
+    Route::apiResource('/products', 'ProductController'); 
+ });
