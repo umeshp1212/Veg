@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoryserviceService {
-
-  private _url:string = "http://127.0.0.1/api";
+  //http://localhost:8000/api/categories
+  private _url:string = "http://127.0.0.1:8000/api";
   constructor(private httpService: HttpClient) { }
 
   getCategories():Observable<any[]>{

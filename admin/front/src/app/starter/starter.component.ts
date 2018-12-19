@@ -13,7 +13,7 @@ export class StarterComponent implements AfterViewInit {
   ngAfterViewInit() {
     this._categoryService.getCategories()
         .subscribe((data:any[]) => {
-          //this.categories = data
+          this.categories = data
           console.log(this.categories);
           
         }, (error) => {
